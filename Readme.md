@@ -88,9 +88,6 @@ git clone https://github.com/gauravsinghcodes/spotify_clone
 cd spotify_clone
 
 ```
-📸 Screenshots
-
-![Homepage](img/homepage.png)
 
 ---
 
