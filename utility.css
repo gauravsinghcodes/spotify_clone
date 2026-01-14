@@ -40,27 +40,22 @@
     padding: 10px;
 }
 
-/* ===== Scrollbar styling ===== */
-
-/* For Webkit browsers (Chrome, Edge, Safari) */
 ::-webkit-scrollbar {
     width: 12px;
 }
 
 ::-webkit-scrollbar-thumb {
     background-color: #333;
-    /* thumb */
     border-radius: 6px;
 }
 
 ::-webkit-scrollbar-track {
     background-color: #222;
-    /* track */
 }
 
-/* For Firefox */
+
 * {
     scrollbar-width: thin;
     scrollbar-color: #333 #222;
-    /* thumb track */
+    
 }
