@@ -1,6 +1,5 @@
 console.log("Spotify clone – playlists loaded");
 
-// ------------ PLAYLIST DATA ------------
 
 const playlists = {
     bangBang: [
@@ -82,7 +81,6 @@ const playlists = {
         }
     ],
 
-    // NEW: KGF PLAYLIST
     kgf: [
         {
             title: "Falak Tu Garaj Tu",
@@ -186,7 +184,7 @@ const playlists = {
     ]
 };
 
-// ------------ GLOBAL STATE ------------
+
 
 const audio = new Audio();
 let currentPlaylistName = "bangBang";
@@ -194,7 +192,7 @@ let currentPlaylist = playlists[currentPlaylistName];
 let currentIndex = 0;
 let lastVolume = 0.5;
 
-// ------------ DOM ELEMENTS ------------
+
 
 const songInfoEl = document.querySelector(".songinfo");
 const songTimeEl = document.querySelector(".songtime");
@@ -253,7 +251,7 @@ function loadPlaylist(name, autoPlay = false) {
     playSong(0, !autoPlay);
 }
 
-// ------------ PLAY SONG ------------
+
 
 function playSong(index, pauseOnly = false) {
     currentIndex = index;
@@ -272,7 +270,7 @@ function playSong(index, pauseOnly = false) {
     songTimeEl.textContent = "00:00 / 00:00";
 }
 
-// ------------ MAIN CONTROLS ------------
+
 
 playBtn.addEventListener("click", () => {
     if (audio.paused) {
@@ -299,7 +297,7 @@ audio.addEventListener("ended", () => {
     playSong(currentIndex);
 });
 
-// ------------ TIME + SEEKBAR ------------
+
 
 audio.addEventListener("timeupdate", () => {
     if (!isNaN(audio.duration)) {
@@ -319,7 +317,7 @@ seekbar.addEventListener("click", e => {
     audio.currentTime = (audio.duration * percent) / 100;
 });
 
-// ------------ VOLUME ------------
+
 
 volumeRange.value = 50;
 audio.volume = 0.5;
@@ -330,7 +328,7 @@ volumeRange.addEventListener("input", e => {
     lastVolume = audio.volume;
 });
 
-// Mute/Unmute
+
 volumeIcon.addEventListener("click", () => {
     if (audio.volume > 0) {
         lastVolume = audio.volume;
@@ -344,7 +342,7 @@ volumeIcon.addEventListener("click", () => {
     }
 });
 
-// ------------ SIDEBAR ------------
+
 
 hamburger.addEventListener("click", () => {
     sidebar.style.left = "0";
@@ -354,7 +352,7 @@ closeSidebar.addEventListener("click", () => {
     sidebar.style.left = "-120%";
 });
 
-// ------------ CARD → PLAYLIST SWITCH ------------
+
 
 document.querySelectorAll(".card").forEach(card => {
     const title = card.querySelector("h2").textContent.toLowerCase();
@@ -377,7 +375,5 @@ document.querySelectorAll(".card").forEach(card => {
         card.addEventListener("click", () => loadPlaylist("khiladi", true));
     } 
 });
-
-// ------------ LOAD DEFAULT PLAYLIST ------------
 
 loadPlaylist("bangBang", false);
