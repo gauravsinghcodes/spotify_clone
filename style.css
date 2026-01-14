@@ -177,7 +177,7 @@ body {
     justify-content: center;
     align-items: center;
 
-    /* 🔥 Sticky instead of fixed */
+    
     position: sticky;
     bottom: 0;
 
@@ -192,12 +192,9 @@ body {
     min-height: 40px;
 
     margin: 0 auto;
-    /* centered playbar */
     z-index: 50;
-    /* stay above content but NOT above footer */
 
     box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.4);
-    /* Spotify-style shadow */
 }
 
 
@@ -466,7 +463,6 @@ body {
 
 .footer-content {
     display: flex;
-    /* justify-content: space-between; */
     justify-content: space-evenly;
     align-items: flex-start;
 }
@@ -509,7 +505,6 @@ body {
     opacity: 0.7;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
     .footer-content {
         flex-direction: column;
