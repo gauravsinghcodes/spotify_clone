@@ -52,10 +52,13 @@ body {
 .home ul li {
     display: flex;
     gap: 15px;
-    width: 14px;
     list-style: none;
     padding-top: 14px;
     font-weight: bold;
+}
+
+.home ul li img {
+    width: 24px;
 }
 
 .heading {
@@ -392,8 +395,8 @@ body {
 
 @media (max-width: 900px) {
     .card {
-        width: 44vw;
-        margin: 0 auto;
+        width: 40vw;
+        margin: 0;
     }
 
     .header>* {
