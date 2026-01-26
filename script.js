@@ -134,7 +134,9 @@ const elements = {
     sidebar: document.getElementById('sidebar'),
     sidebarToggle: document.getElementById('sidebar-toggle'),
     closeSidebar: document.getElementById('close-sidebar'),
-    playAllBtn: document.getElementById('play-all-btn')
+    closeSidebar: document.getElementById('close-sidebar'),
+    playAllBtn: document.getElementById('play-all-btn'),
+    backBtn: document.getElementById('back-btn')
 };
 
 // ------------ INITIALIZATION ------------
@@ -304,9 +306,18 @@ function setupEventListeners() {
     // For now, let's make the "Home" link reset view
     document.querySelector('.nav-links li:first-child').addEventListener('click', (e) => {
         e.preventDefault();
-        elements.playlistContainer.parentElement.classList.remove('hidden');
-        elements.songListView.classList.add('hidden');
+        goBackToPlaylists();
     });
+
+    // Back Button
+    elements.backBtn.addEventListener('click', () => {
+        goBackToPlaylists();
+    });
+}
+
+function goBackToPlaylists() {
+    elements.playlistContainer.parentElement.classList.remove('hidden');
+    elements.songListView.classList.add('hidden');
 }
 
 function updateSeekbar() {
