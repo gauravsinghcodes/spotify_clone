@@ -632,13 +632,18 @@ input[type=range] {
         padding-bottom: var(--playbar-height);
     }
 
+    .content-scroll {
+        padding-bottom: 200px;
+        /* Ensure last song is visible above playbar */
+    }
+
     .nav-controls #sidebar-toggle {
         display: flex;
     }
 
-    .nav-controls button:not(#sidebar-toggle) {
+    .nav-controls button:not(#sidebar-toggle):not(#back-btn) {
         display: none;
-        /* Hide back/forward arrows on mobile */
+        /* Hide forward arrow on mobile, keep back & hamburger */
     }
 
     .card-container {
