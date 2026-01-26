@@ -4,259 +4,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Clone - Premium</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="utility.css">
-    <title>Spotify - Web Player: Music for everyone</title>
-    <link rel="icon" sizes="16x16" type="image/png"
-        href="https://open.spotifycdn.com/cdn/images/favicon16.1c487bff.png">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="https://open.spotifycdn.com/cdn/images/favicon16.1c487bff.png">
 </head>
 
 <body>
-    <div class="container flex bg-black">
-        <div class="left">
-            <div class="close">
-                <img width="30" class="invert" src="img/close.svg" alt="">
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <img src="img/logo.svg" alt="Spotify" class="logo invert">
+                <button class="close-btn invert" id="close-sidebar">&times;</button>
             </div>
-            <div class="home bg-grey rounded m-1 p-1">
-                <div class="logo"><img width="110" class="invert" src="img/logo.svg" alt=""></div>
+
+            <nav class="nav-links">
                 <ul>
-                    <li><img class="invert" src="img/home.svg" alt="home">Home</li>
-                    <li><img class="invert" src="img/search.svg" alt="home">Search</li>
+                    <li class="active"><a href="#"><img src="img/home.svg" class="invert" alt="Home"> Home</a></li>
+                    <li><a href="#"><img src="img/search.svg" class="invert" alt="Search"> Search</a></li>
                 </ul>
-            </div>
+            </nav>
 
-            <div class="library bg-grey rounded m-1 p-1">
-                <div class="heading">
-                    <img class="invert" src="img/playlist.svg" alt="">
-                    <h2>
-                        Your Library
-                    </h2>
+            <div class="library-section">
+                <div class="library-header">
+                    <img src="img/playlist.svg" class="invert" alt="Library">
+                    <span>Your Library</span>
                 </div>
-
-                <div class="songList">
-
-                    <ul>
-
-                    </ul>
-                </div>
-
-                <div class="footer">
-                    <div><a href="https://www.spotify.com/jp/legal/"><span>Legal</span></a></div>
-                    <div><a href="https://www.spotify.com/jp/privacy/"><span>Privacy Center</span></a></div>
-                    <div><a href="https://www.spotify.com/jp/legal/privacy-policy/"><span>Privacy Policy</span></a>
-                    </div>
-                    <div><a href="https://www.spotify.com/jp/legal/cookies-policy/"><span>Cookies</span></a></div>
-                    <div><a href="https://www.spotify.com/jp/legal/privacy-policy/#s3"><span>About Ads</span></a></div>
-                    <div><a href="https://www.spotify.com/jp/accessibility/"><span>Accessibility</span></a></div>
+                <!-- Dynamic Playlist List (Optional - for now static or minimal) -->
+                <div class="library-content">
+                    <p class="hint-text">Create your first playlist</p>
+                    <button class="small-btn">Create playlist</button>
                 </div>
             </div>
 
-
-        </div>
-        <div class="right bg-grey rounded">
-            <div class="header">
-                <div class="nav">
-                    <div class="hamburgerContainer">
-
-                        <img width="40" class="invert hamburger" src="img/hamburger.svg" alt="">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M15 6L9.70711 11.2929C9.37377 11.6262 9.20711 11.7929 9.20711 12C9.20711 12.2071 9.37377 12.3738 9.70711 12.7071L15 18"
-                                stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M9 18L14.2929 12.7071C14.6262 12.3738 14.7929 12.2071 14.7929 12C14.7929 11.7929 14.6262 11.6262 14.2929 11.2929L9 6"
-                                stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                    </div>
-                </div>
-                <div class="buttons">
-                    <button class="signupbtn">Sign up</button>
-                    <button class="loginbtn">Log in</button>
-                </div>
+            <div class="sidebar-footer">
+                <a href="#">Legal</a>
+                <a href="#">Privacy Center</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Cookies</a>
             </div>
-            <div class="spotifyPlaylists">
-                <h1>Spotify Playlists</h1>
-                <div class="cardContainer">
-                    <div class="card">
-                        <div class="play">
-                            <img src="img/play.svg" alt="play" srcset="">
-                        </div>
+        </aside>
 
-                        <img aria-hidden="false" draggable="false" loading="lazy"
-                            src="https://i.scdn.co/image/ab67616d00001e02058494835ee23ad6104f81f2" alt=""
-                            class="LBM25IAoFtd0wh7k3EGM bFtVZZnZgTWjjyzkPA5k VPnrctjNWVzCtyD7DZAG PgTMmU2Gn7AESFMYhw4i"
-                            srcset="https://i.scdn.co/image/ab67616d00001e02058494835ee23ad6104f81f2 150w, https://i.scdn.co/image/ab67616d00001e02058494835ee23ad6104f81f2 300w, https://i.scdn.co/image/ab67616d0000b273058494835ee23ad6104f81f2 320w, https://i.scdn.co/image/ab67616d0000b273058494835ee23ad6104f81f2 640w"
-                            sizes="(min-width: 1280px) 232px, 192px">
-                        <h2>Bang Bang</h2>
-                        <p></p>
-                    </div>
-
-                    <div class="card">
-                        <div class="play">
-                            <img src="img/play.svg" alt="play" srcset="">
-                        </div>
-                        <img aria-hidden="false" draggable="false" loading="lazy"
-                            src="https://i.scdn.co/image/ab67616d00001e0205a0d368c0fbf69c9a76bc81" alt=""
-                            class="LBM25IAoFtd0wh7k3EGM bFtVZZnZgTWjjyzkPA5k VPnrctjNWVzCtyD7DZAG PgTMmU2Gn7AESFMYhw4i"
-                            srcset="https://i.scdn.co/image/ab67616d00001e0205a0d368c0fbf69c9a76bc81 150w, https://i.scdn.co/image/ab67616d00001e0205a0d368c0fbf69c9a76bc81 300w, https://i.scdn.co/image/ab67616d0000b27305a0d368c0fbf69c9a76bc81 320w, https://i.scdn.co/image/ab67616d0000b27305a0d368c0fbf69c9a76bc81 640w"
-                            sizes="(min-width: 1280px) 232px, 192px">
-                        <h2>Mohabbatein</h2>
-                        <p></p>
-                    </div>
-
-                    <div class="card">
-                        <div class="play">
-                            <img src="img/play.svg" alt="play" srcset="">
-                        </div>
-                        <img aria-hidden="false" draggable="false" loading="lazy"
-                            src="https://i.scdn.co/image/ab67616d00001e025b82c9cb2b20c1c14b2be308" alt=""
-                            class="LBM25IAoFtd0wh7k3EGM bFtVZZnZgTWjjyzkPA5k VPnrctjNWVzCtyD7DZAG PgTMmU2Gn7AESFMYhw4i"
-                            srcset="https://i.scdn.co/image/ab67616d00001e025b82c9cb2b20c1c14b2be308 150w, https://i.scdn.co/image/ab67616d00001e025b82c9cb2b20c1c14b2be308 300w, https://i.scdn.co/image/ab67616d0000b2735b82c9cb2b20c1c14b2be308 320w, https://i.scdn.co/image/ab67616d0000b2735b82c9cb2b20c1c14b2be308 640w"
-                            sizes="(min-width: 1280px) 232px, 192px">
-                        <h2>Holiday</h2>
-                        <p></p>
-                    </div>
-
-                    <div class="card">
-                        <div class="play">
-                            <img src="img/play.svg" alt="play" srcset="">
-                        </div>
-                        <img aria-hidden="false" draggable="false" loading="eager"
-                            src="https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72c03e2b33fc6a2131fdb469717"
-                            alt=""
-                            class="LBM25IAoFtd0wh7k3EGM bFtVZZnZgTWjjyzkPA5k VPnrctjNWVzCtyD7DZAG PgTMmU2Gn7AESFMYhw4i"
-                            sizes="(min-width: 1280px) 232px, 192px">
-                        <h2>KGF Chapter 1 & 2</h2>
-                        <p></p>
-                    </div>
-
-                    <div class="card">
-                        <div class="play">
-                            <img src="img/play.svg" alt="play" srcset="">
-                        </div>
-                        <img aria-hidden="false" draggable="false" loading="lazy"
-                            src="https://i.scdn.co/image/ab67616d00001e0240c98561f61a572a20ba71e1" alt=""
-                            class="LBM25IAoFtd0wh7k3EGM bFtVZZnZgTWjjyzkPA5k VPnrctjNWVzCtyD7DZAG PgTMmU2Gn7AESFMYhw4i"
-                            srcset="https://i.scdn.co/image/ab67616d00001e0240c98561f61a572a20ba71e1 150w, https://i.scdn.co/image/ab67616d00001e0240c98561f61a572a20ba71e1 300w, https://i.scdn.co/image/ab67616d0000b27340c98561f61a572a20ba71e1 320w, https://i.scdn.co/image/ab67616d0000b27340c98561f61a572a20ba71e1 640w"
-                            sizes="(min-width: 1280px) 232px, 192px">
-                        <h2>Main Tera Hero</h2>
-                        <p></p>
-                    </div>
-
-                    <div class="card">
-                        <div class="play">
-                            <img src="img/play.svg" alt="play" srcset="">
-                        </div>
-                        <img aria-hidden="false" draggable="false" loading="lazy"
-                            src="https://i.scdn.co/image/ab67616d00001e02d40f14fbc589329567858fc0" alt=""
-                            class="LBM25IAoFtd0wh7k3EGM bFtVZZnZgTWjjyzkPA5k VPnrctjNWVzCtyD7DZAG PgTMmU2Gn7AESFMYhw4i"
-                            srcset="https://i.scdn.co/image/ab67616d00001e02d40f14fbc589329567858fc0 150w, https://i.scdn.co/image/ab67616d00001e02d40f14fbc589329567858fc0 300w, https://i.scdn.co/image/ab67616d0000b273d40f14fbc589329567858fc0 320w, https://i.scdn.co/image/ab67616d0000b273d40f14fbc589329567858fc0 640w"
-                            sizes="(min-width: 1280px) 232px, 192px">
-                        <h2>Dishoom</h2>
-                        <p></p>
-                    </div>
-
-                    <div class="card">
-                        <div class="play">
-                            <img src="img/play.svg" alt="play" srcset="">
-                        </div>
-                        <img aria-hidden="false" draggable="false" loading="lazy"
-                            src="https://i.scdn.co/image/ab67616d00001e020df18810131fd56a87a5fc7a" alt=""
-                            class="LBM25IAoFtd0wh7k3EGM bFtVZZnZgTWjjyzkPA5k VPnrctjNWVzCtyD7DZAG PgTMmU2Gn7AESFMYhw4i"
-                            srcset="https://i.scdn.co/image/ab67616d00001e020df18810131fd56a87a5fc7a 150w, https://i.scdn.co/image/ab67616d00001e020df18810131fd56a87a5fc7a 300w, https://i.scdn.co/image/ab67616d0000b2730df18810131fd56a87a5fc7a 320w, https://i.scdn.co/image/ab67616d0000b2730df18810131fd56a87a5fc7a 640w"
-                            sizes="(min-width: 1280px) 232px, 192px">
-                        <h2>Race</h2>
-                        <p></p>
-                    </div>
-
-                    <div class="card">
-                        <div class="play">
-                            <img src="img/play.svg" alt="play" srcset="">
-                        </div>
-                        <img aria-hidden="false" draggable="false" loading="lazy"
-                            src="https://i.scdn.co/image/ab67616d00001e0233f89bc08b2d9cda09a857a1" alt=""
-                            class="LBM25IAoFtd0wh7k3EGM bFtVZZnZgTWjjyzkPA5k VPnrctjNWVzCtyD7DZAG PgTMmU2Gn7AESFMYhw4i"
-                            srcset="https://i.scdn.co/image/ab67616d00001e0233f89bc08b2d9cda09a857a1 150w, https://i.scdn.co/image/ab67616d00001e0233f89bc08b2d9cda09a857a1 300w, https://i.scdn.co/image/ab67616d0000b27333f89bc08b2d9cda09a857a1 320w, https://i.scdn.co/image/ab67616d0000b27333f89bc08b2d9cda09a857a1 640w"
-                            sizes="(min-width: 1280px) 232px, 192px">
-                        <h2>Khiladi 786</h2>
-                        <p></p>
-                    </div>
-
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header/Top Bar -->
+            <header class="top-bar">
+                <div class="nav-controls">
+                    <button class="circle-btn" id="sidebar-toggle"><img src="img/hamburger.svg" class="invert"
+                            alt="Menu"></button>
+                    <button class="circle-btn">&lt;</button>
+                    <button class="circle-btn">&gt;</button>
                 </div>
-                <div class="playbar">
-                    <div class="seekbar">
-                        <div class="circle">
+                <div class="auth-buttons">
+                    <button class="btn-text">Sign up</button>
+                    <button class="btn-white">Log in</button>
+                </div>
+            </header>
 
+            <!-- Playlist View -->
+            <div class="content-scroll">
+                <div class="playlist-grid-section">
+                    <h2>Spotify Playlists</h2>
+                    <div class="card-container" id="playlist-container">
+                        <!-- Javascript will inject cards here -->
+                    </div>
+                </div>
+
+                <div class="song-list-section hidden" id="song-list-view">
+                    <div class="playlist-hero">
+                        <div class="hero-image" id="hero-image">
+                            <img src="" alt="Playlist Art">
+                        </div>
+                        <div class="hero-info">
+                            <span>Playlist</span>
+                            <h1 id="playlist-title">Playlist Title</h1>
+                            <p id="playlist-desc">Description or Artist info</p>
                         </div>
                     </div>
-                    <div class="abovebar">
 
+                    <div class="playlist-actions">
+                        <button class="play-btn-large" id="play-all-btn">
+                            <img src="img/play.svg" alt="Play">
+                        </button>
+                    </div>
 
-                        <div class="songinfo">
-
+                    <div class="songs-container">
+                        <div class="song-header-row">
+                            <span>#</span>
+                            <span>Title</span>
+                            <span>Artist</span>
                         </div>
-                        <div class="songbuttons">
-                            <img width="35" id="previous" src="img/prevsong.svg" alt="">
-                            <img width="35" id="play" src="img/play.svg" alt="">
-                            <img width="35" id="next" src="img/nextsong.svg" alt="">
-                        </div>
-                        <div class="timevol">
-
-
-                            <div class="songtime">
-
-                            </div>
-                            <div class="volume">
-                                <img width="25" src="img/volume.svg" alt="">
-                                <div class="range">
-                                    <input type="range" name="volume" id="">
-                                </div>
-                            </div>
-                        </div>
+                        <ul id="current-song-list">
+                            <!-- Songs go here -->
+                        </ul>
                     </div>
                 </div>
             </div>
-        </div>
+        </main>
+
+        <!-- Playbar -->
+        <footer class="playbar">
+            <div class="now-playing">
+                <img src="img/music.svg" alt="Art" class="track-art invert" id="min-track-art">
+                <div class="track-info">
+                    <div class="track-name" id="track-name">Song Name</div>
+                    <div class="track-artist" id="track-artist">Artist</div>
+                </div>
+            </div>
+
+            <div class="player-controls">
+                <div class="control-buttons">
+                    <button class="control-btn" id="prev"><img src="img/prevsong.svg" class="invert"
+                            alt="Prev"></button>
+                    <button class="control-btn play-pause-btn" id="play"><img src="img/play.svg" class="invert"
+                            alt="Play"></button>
+                    <button class="control-btn" id="next"><img src="img/nextsong.svg" class="invert"
+                            alt="Next"></button>
+                </div>
+                <div class="playback-bar">
+                    <span id="current-time">0:00</span>
+                    <div class="progress-container" id="seekbar">
+                        <div class="progress-bar" id="seekbar-fill"></div>
+                        <div class="progress-thumb" id="seekbar-thumb"></div>
+                    </div>
+                    <span id="total-time">0:00</span>
+                </div>
+            </div>
+
+            <div class="volume-controls">
+                <img src="img/volume.svg" class="invert" alt="Vol">
+                <input type="range" id="volume-range" min="0" max="100" value="50">
+            </div>
+        </footer>
     </div>
-    <footer class="footer1">
-        <div class="footer-content">
-
-            <div class="footer-links">
-                <div class="footer-column">
-                    <h4>Company</h4>
-                    <a href="#">About</a>
-                    <a href="#">Jobs</a>
-                    <a href="#">For the Record</a>
-                </div>
-
-                <div class="footer-column">
-                    <h4>Communities</h4>
-                    <a href="#">For Artists</a>
-                    <a href="#">Developers</a>
-                    <a href="#">Advertising</a>
-                </div>
-
-                <div class="footer-column">
-                    <h4>Useful links</h4>
-                    <a href="#">Support</a>
-                    <a href="#">Free Mobile App</a>
-                </div>
-            </div>
-
-
-            <div class="footer-social">
-                <a href="https://www.instagram.com/gaurav_singh_1615?igsh=MTgxdjZsb2p4aGkxbw==" target="_blank">
-                    <img src="img/instagram.svg" alt="Instagram" />
-                </a>
-                <a href="https://www.facebook.com/share/14RXChfnGv4/" target="_blank">
-                    <img src="img/facebook.svg" alt="Facebook" />
-                </a>
-            </div>
-
-        </div>
-    </footer>
 
     <script src="script.js"></script>
 </body>
